@@ -1,0 +1,119 @@
+@import "base/variables";
+@import "base/mixin";
+@import "base/mapas";
+@import "base/extend";
+@import "components/cursos";
+@import "components/CieloStore";
+
+.contenedor{
+    display: grid;
+    grid-template-areas: "header"
+                         "nav"
+                         "main"
+                         "footer";
+}
+
+body{
+
+background-color: $Color-Principal;
+
+
+.tamañoLogo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+ 
+    .asd{
+       width: 50%;
+    }
+    .logo{
+        width: 100%;  
+    }
+}
+.header{
+    grid-area: header;
+}
+
+.navegacion{
+    grid-area: nav;
+    background-color: $color-Secundario;
+    border: 1px black solid;
+    border-radius: 10px;
+
+}
+
+.subMenuCursos{
+    background-color: $color-Terciario;
+}
+
+.subMenuTienda{
+    background-color: $color-Terciario;
+    
+}
+
+}
+
+
+
+.main{
+    grid-area: main;
+    
+    .Titulo{
+        align-items: center;
+        text-align: center;
+    }
+
+    .pieDeImagenIndex{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .marcas{
+        margin-top: 50px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        .tituloMarca{
+            color: white;
+            text-align: start;
+            align-self: center;
+            margin-right: 50px;
+            margin-left: 20px;
+        }
+        .logoProveedor{
+            margin-left: 5px;
+            width: 10%;
+        }
+    }
+}
+
+.footer{
+    grid-area: footer;
+    margin-top: 40px;
+    text-align: center;
+
+    .logo{
+        margin-left: 10px;
+        align-items: center;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 768px) and (min-width: 320px)
+{
+    div .marcas{
+        display: none;
+    }
+
+    .tituloMarca{
+        display: none;
+    }
+
+    .logoProveedor{
+        display: none;
+    }
+
+    .pieDeImagenIndex{
+        margin-top: 20px;
+    }
+}

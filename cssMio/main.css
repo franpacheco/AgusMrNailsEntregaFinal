@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*variables*/
+/*MIXIN*/
+.botonPresencial:hover {
+  transform: scale(110%); }
+
+.botonVirtual:hover {
+  transform: scale(110%); }
+
+/*mapas*/
+/*extend*/
+ul .botonPresencial, ul .botonVirtual {
+  border: 1px black solid;
+  border-radius: 4px;
+  margin: 5px;
+  color: black; }
+
+ul .botonPresencial {
+  background-color: #F299B1; }
+
+ul .botonVirtual {
+  background-color: #F299B1; }
+
+.fondoCielo {
+  background-color: #f2f8f7; }
+
+.contenedor {
+  display: grid;
+  grid-template-areas: "header" "nav" "main" "footer"; }
+
+body {
+  background-color: #E9B9C9; }
+  body .tamañoLogo {
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+    body .tamañoLogo .asd {
+      width: 50%; }
+    body .tamañoLogo .logo {
+      width: 100%; }
+  body .header {
+    grid-area: header; }
+  body .navegacion {
+    grid-area: nav;
+    background-color: #F299B1;
+    border: 1px black solid;
+    border-radius: 10px; }
+  body .subMenuCursos {
+    background-color: #ffd9e2; }
+  body .subMenuTienda {
+    background-color: #ffd9e2; }
+
+.main {
+  grid-area: main; }
+  .main .Titulo {
+    align-items: center;
+    text-align: center; }
+  .main .pieDeImagenIndex {
+    font-size: 25px;
+    text-align: center; }
+  .main .marcas {
+    margin-top: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center; }
+    .main .marcas .tituloMarca {
+      color: white;
+      text-align: start;
+      align-self: center;
+      margin-right: 50px;
+      margin-left: 20px; }
+    .main .marcas .logoProveedor {
+      margin-left: 5px;
+      width: 10%; }
+
+.footer {
+  grid-area: footer;
+  margin-top: 40px;
+  text-align: center; }
+  .footer .logo {
+    margin-left: 10px;
+    align-items: center; }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  div .marcas {
+    display: none; }
+  .tituloMarca {
+    display: none; }
+  .logoProveedor {
+    display: none; }
+  .pieDeImagenIndex {
+    margin-top: 20px; } }
